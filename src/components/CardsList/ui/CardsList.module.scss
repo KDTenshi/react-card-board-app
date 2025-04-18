@@ -1,0 +1,26 @@
+@use "../../../shared/style/colors" as c;
+
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.Title {
+  font-size: 45px;
+  color: c.$blue-dark;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 5px solid c.$blue-dark;
+  padding: 25px 25px;
+  border-radius: 25px;
+  background: c.$blue-light;
+}

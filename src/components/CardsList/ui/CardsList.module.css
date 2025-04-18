@@ -1,0 +1,24 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.Title {
+  font-size: 45px;
+  color: #9fb3df;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 5px solid #9fb3df;
+  padding: 25px 25px;
+  border-radius: 25px;
+  background: #bddde4;
+}/*# sourceMappingURL=CardsList.module.css.map */

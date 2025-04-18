@@ -1,0 +1,20 @@
+.Card {
+  padding: 75px 50px;
+  background: #fff1d5;
+  border: 5px solid #9fb3df;
+  border-radius: 25px;
+  cursor: grab;
+}
+.Card.Dragging {
+  background: #9ec6f3;
+}
+
+.Title {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9fb3df;
+}
+.Title.Dragging {
+  color: #fff1d5;
+}/*# sourceMappingURL=Card.module.css.map */
