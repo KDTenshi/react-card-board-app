@@ -4,6 +4,8 @@ import { TCard } from "../types/types";
 type CardsState = {
   cards: TCard[];
   selectedCard: TCard | null;
+  isDragging: boolean;
+  dragPosition: { x: number; y: number };
 };
 
 const initialState: CardsState = {
@@ -14,6 +16,8 @@ const initialState: CardsState = {
     { id: 4, title: "Card 4" },
   ],
   selectedCard: null,
+  isDragging: false,
+  dragPosition: { x: 0, y: 0 },
 };
 
 export const cardsSlice = createSlice({
@@ -41,7 +45,19 @@ export const cardsSlice = createSlice({
         state.cards.splice(dragOverCardIndex, 0, selectedCard);
       }
     },
+    updateDragPosition: (state, action: PayloadAction<{ x: number; y: number }>) => {
+      const { x, y } = action.payload;
+
+      state.dragPosition = { x, y };
+    },
+    startDragging: (state) => {
+      state.isDragging = true;
+    },
+    stopDragging: (state) => {
+      state.isDragging = false;
+    },
   },
 });
 
-export const { selectCard, unselectCard, moveCard } = cardsSlice.actions;
+export const { selectCard, unselectCard, moveCard, updateDragPosition, startDragging, stopDragging } =
+  cardsSlice.actions;
